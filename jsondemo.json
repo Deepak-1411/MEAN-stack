@@ -1,0 +1,1 @@
+{"exe":[{"stepNo":1,"Stepdescription":"Verifybutton","Fieldtypes":"Button","Keyword":"isdisplayed"},{"stepNo":2,"Stepdescription":"Verify Textbox","Fieldtypes":"Textbox","Keyword":"input"},{"stepNo":3,"Stepdescription":"Verify Checkbox","Fieldtypes":"Checkbox","Keyword":"isdisplayed"},{"stepNo":4,"Stepdescription":"Verify Combo box","Fieldtypes":"combobox","Keyword":"input"}]}

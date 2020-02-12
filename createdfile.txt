@@ -1,0 +1,3 @@
+This file is generated using the node js file system 
+ still i dont know how to move data to the next line
+ this statment added into text file using apppend method of the node.js

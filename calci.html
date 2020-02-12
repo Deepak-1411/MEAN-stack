@@ -1,0 +1,114 @@
+<!--lets create from end for the calculator-->
+<!Doctypehtml>
+<html><head><title>Calculatehere</title>
+</head>
+<style>
+html,body{
+    width: 100%;
+    height:100%;
+font-family: 'Courier New', Courier, monospace;
+color: darkgrey;
+background:cyan
+}
+p{
+    height: 48px;
+    width: 175px;
+    padding-left: 14px;
+    padding-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 6px;
+    padding-top: 10px;
+    border-left-width: 0px;
+    border-top-width: 0px;
+    margin-left: 6px;
+    background-color:white;
+}
+#container{
+    position: fixed;
+    width: 200px;
+    height: 382px;
+    top:30%;
+    left:50%;
+    margin-top:-140px;
+    margin-left: -170px;
+    background: cadetblue;
+    border-radius: 3px;
+    border:1px solid;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+button{
+    padding-left:20px;
+    padding-right:20px;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+form{
+    margin:0 auto;
+    margin-top:20px;
+    padding-left: 13px;
+}
+label{
+    color: #555;
+    display: inline-block;
+    margin-left: 18px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+input{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+    outline: none;
+}
+
+
+</style>
+<body>
+    <form>
+<div id='container'>
+    <p name="Result" id="result" placeholder="Result should display here">action should display here</p>
+
+
+</form>
+<form>
+    <div>
+        <button  class="button"id='one' onclick="myfunction()">1</button>
+        <button  class="button" id="two" onclick="myfunction()">2</button>
+        <button  class="button" id ="three" onclick="myfunction()">3</button>
+    </div>
+    <br>
+    <div>
+            <button id='four' onclick="myfunction()">4</button>
+            <button id="five" onclick="myfunction()">5</button>
+            <button id ="six" onclick="myfunction()">6</button>
+        </div>
+<br>
+<div>
+        <button id='seven' onclick="myfunction()">7</button>
+        <button id="eight" onclick="myfunction()">8</button>
+        <button id ="nine" onclick="myfunction()">9</button>
+    </div>
+    <br>
+    <div>
+            <button id='zero' onclick="myfunction()">0</button>
+            <button id="plus" onclick="myfunction()">+</button>
+            <button id ="minus" onclick="myfunction()">-</button>
+        </div>
+        <br>
+        <div>
+                <button id='equalto' onclick="myfunction()">=</button>
+                <button id="multiplication" onclick="myfunction()">*</button>
+                <button id ="division" onclick="myfunction()">/</button>
+            </div>
+</form>
+
+<script>
+    function myfunction(){
+       // var x=document.getElementById('one').value;
+       // console.log(x)
+        document.getElementById("result").innerHTML="One is from script";
+        
+        }
+</script>
+</div>
+</body>
+</html>

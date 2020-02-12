@@ -1,0 +1,17 @@
+//Json 
+
+Json is pure text there is no datatype with propertie all are stored in key value pair in the string
+ 
+ below are the pretty json object 
+
+ {// this is json object 
+title: 'This is the title',
+description: 'Here is where the description would be',
+'page-count': 150,
+authors: [                                           //this is an object array inside the json
+{ name: 'John Smith' },
+{ name: 'Jane Doe' },
+{ name: 'Andrea Johnson' }
+],
+id: '1234-567-89012345'
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html><head><title>
+    Calculator
+</title><style>
+#container {
+    position: fixed;
+    width: 340px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -170px;
+	background: #fff;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	
+}
+</style></head>
+
+<body>
+<h3>My Calculator</h3>
+<div id="container" style="
+    width: 215px;
+    height: 223px;
+    border-left-width: 18px;
+    border-top-width: 12px;
+    border-right-width: 14px;
+    border-bottom-width: 16px;
+    margin-top: 0px;
+    top: 150px;
+">
+<form>
+    <div>
+        <input id="First value" name="First value" placeholder="enter the first value" style="
+    width: 210px;
+    height: 35px;
+    background: aqua;
+">
+        <select name="operator" style="
+    padding-left: 0px;
+    background: yellow;
+    height: 27px;
+    border-right-width: 0px;
+    width: 212px;
+">
+            <option name="Addition">+</option>
+            <option name="Substraction">-</option>
+            <option name="Multiplication">*</option>
+            <option name="division">/</option>
+        </select>
+        <input id="Secound value" name="secound value" placeholder="Enter the secound number" style="
+    width: 210px;
+    height: 45px;
+    background: aqua;
+">
+    </div>
+</form>
+<button type="submit" name="calculate" onclick="myfunction()" style="
+    padding-left: 81px;
+    padding-right: 72px;
+">Calculate</button>
+<form>
+    <div>
+<input name="result" style="
+    width: 209px;
+    height: 41px;
+    background: blue;
+    color: white;
+">
+    </div>
+</form>
+<script>
+function myfunction(){
+var operation=document.getElementsByName('operator').values;
+if(operation=='+'){
+var result=document.getElementById('First value').values + document.getElementById('Secound value').values ;
+console.log(result)
+document.getElementsByName('result').values=result;
+}
+}
+
+
+</script>
+</div>
+</body></html>

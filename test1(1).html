@@ -1,0 +1,73 @@
+<!DOCTYPEhtml>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+        <form>
+            <div id="container">
+    <input id="Firstvalue" style="
+  
+    width: 119px;
+    background: skyblue;
+
+">
+    <select id="operation">
+        <option id"addition"="">Addition</option>
+    <option id="substraction">Substraction</option>
+    <option id="multiplication">multiplication</option>
+    <option id="division">Division</option>
+    </select>
+<input id="secoundvalue" style="
+    
+width: 119px;
+background: skyblue;
+
+">
+</form>
+<form>
+<button id="calculate" onclick="myfunction()" style="
+    width: 54px;
+    background: black;
+    color: white;
+">submit</button>
+</form>
+
+<input placeholder="result " id="result" style="
+    
+width: 119px;
+background: skyblue;
+
+">
+</div>
+<script>
+function myfunction(){
+    console.log("Inside the Myfunction method")
+    var a= document.getElementById('Firstvalue').value;
+    var b= document.getElementById('secoundvalue').value;
+  var mulresult=parseInt(a)*parseInt(b);
+  var divresult=parseInt(a)/parseInt(b);
+  var operand=document.getElementById('operation').value;
+  if(operand=='+'){
+    var additionresult=parseInt(a)+parseInt(b);
+      document.getElementById('result').value=additionresult;
+  }
+  if(operand=='-'){
+    var subresult=parseInt(a)-parseInt(b);
+      document.getElementById('result').value=subresult;
+  }
+  if(operand=='*'){
+    var mulresult=parseInt(a)*parseInt(b);
+      document.getElementById('result').value=mulresult;
+  }
+  if(operand=='/'){
+    var divresult=parseInt(a)/parseInt(b);
+      document.getElementById('result').value=divresult;
+  }
+  
+}
+
+
+</script>
+
+
+
+
+
+</body></html>
