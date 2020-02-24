@@ -1,6 +1,6 @@
 const express= require('express');
 const app = express();
-const Joi =require('joi');
+const Joi =require('@hapi/joi');
 app.use(express.json());
 
 //creating const courses object
@@ -32,7 +32,7 @@ app.get('/api/courses/:id',(req,res)=>{
 
 
 //code to create the http post request
-app.post('/api/courses/',(req,res)=>{
+app.post('/api/courses',(req,res)=>{
 //always provide the input validation befor providing response
 // if(!req.body.name ||req.body.name.length<3){
 //     res.status(400).send("Name is required and should be minimum 3 character");
@@ -41,14 +41,17 @@ app.post('/api/courses/',(req,res)=>{
 //there is a package available name as joi that can be used to 
 //validate the input of the req to make below code easy
 //with using joi validation the input 
-const schema={
+const schema=Joi.object({
     //below code we are validating the using joi 
     //that name should be a string and should have the minimum 3 digits and a required from body
-    name:Joi.String().min(3).required();
-  
-};
+    //joi has been update need to change according to the newmodification
+    name:Joi.String().min(3).required()
+});
 var result =Joi.validate(req.body,schema);
-console.log(result);
+if(result.error){
+    res.status(400).send(result.error);
+    return;
+}
 
 const course ={
     id : courses.length+1,
@@ -60,6 +63,19 @@ const course ={
 courses.push(course);
 res.send(course);
 });
+
+app.delete('/api/courses/:id',(req,res)=>{
+    //look for the course
+    const course = courses.find(c=>c.id===parseInt(req.params.id));
+    const index = courses.indexOf(course);
+    courses.splice(index,1);
+    res.send(course);
+    //not existing,return 404
+
+    //delete 
+    //return the deleted course
+
+})
 
 const port= process.env.PORT ||3000;
 
