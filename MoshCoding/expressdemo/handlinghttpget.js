@@ -41,22 +41,19 @@ app.post('/api/courses',(req,res)=>{
 //there is a package available name as joi that can be used to 
 //validate the input of the req to make below code easy
 //with using joi validation the input 
-const schema=Joi.object({
+const schema=({
     //below code we are validating the using joi 
     //that name should be a string and should have the minimum 3 digits and a required from body
     //joi has been update need to change according to the newmodification
-    name:Joi.String().min(3).required()
+    name:Joi.string().min(3).required()
 });
-var result =Joi.validate(req.body,schema);
-if(result.error){
-    res.status(400).send(result.error);
-    return;
-}
-
 const course ={
     id : courses.length+1,
     name :req.body.name 
 };
+return Joi.validate(course,schema);
+
+
 
 
 
