@@ -11,8 +11,12 @@ const logger = require('./logger.js');
 app.use(logger);  //custom middle ware fuction to user in our express
 
 //express already have so many middle ware function i.e called encoded as well
-app.use(express.urlencoded());  //key=value&&key=value
+app.use(express.urlencoded({extended:true}));  //key=value&&key=value
 //this one populate that body and make it like req.body
+
+//to use static acces ex css and html pages or static files related to project can be used here
+app.use(express.static('public')); //thing inside the public folder can be used directly
+//now check localhost:3000/readmeFile.txt
 
 
 const courses = [
